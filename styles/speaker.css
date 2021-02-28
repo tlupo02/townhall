@@ -56,14 +56,13 @@ main {
 h1{
 	font-size: 150%;
 	padding-top: .5em;
-	padding-bottom: .25em;
+	padding-bottom: .15em;
 	margin: 0;
+	color: #800000;
 }
 article{
 	padding-top: .5em;
 	padding-bottom: .5em;
-	border-top: 2px solid #800000;
-	border-bottom: 2px solid #800000;
 }
 article img{
 	float: right;
@@ -75,6 +74,7 @@ article img{
 }
 article h2{
 	padding-top: 0;
+	color: black;
 }
 article h3{
 	font-size: 105%;
