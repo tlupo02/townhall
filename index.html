@@ -1,22 +1,33 @@
 <!DOCTYPE html>
 <html lang="en">
+	
 
 <head>
 	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<title>San Joaquin Valley Town Hall</title>
 	<link rel="shortcut icon" href="images/favicon.ico">
 	<link rel="stylesheet" href="styles/normalize.css">
 	<link rel="stylesheet" href="styles/main.css">
+	<link rel="stylesheet" href="styles/slicknav.css">
+    <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+    <script src="js/jquery.slicknav.min.js"></script>
+	<script type="text/javascript">
+    	$(document).ready(function(){
+			$('#nav_menu').slicknav({prependTo:"#mobile_menu"});
+    	});
+    </script>
 </head>
 
 <body>
 	<header>
 		<img src="images/town_hall_logo.gif" alt="Town Hall Logo" height="80">
 		<h2>San Joaquin Valley Town Hall</h2>
-		<h3>Celebrating our <span>75<sup>th</span> Year</em></h3>
+		<h3>Celebrating our <span class="shadow">75<sup>th</span> Year</em></h3>
 	</header>
 
-<nav id="nav_menu">
+	<nav id="mobile_menu"></nav>
+	<nav id="nav_menu">
 	<ul>
 		<li ><a href="index.html" class="current">Home</a></li>
 		<li><a href="index.html">Speakers</a></li>
@@ -25,12 +36,12 @@
 		<li class="last-item">
 			<a href="index.html">About Us</a>
 			<ul>
-			<a href="">Our History</a>
-			<a href="">Board of Directors</a>
-			<a href="">Past Speakers</a>
-			<a href="">Contact Information</a>
-		</ul>
-	</li>
+				<a href="">Our History</a>
+				<a href="">Board of Directors</a>
+				<a href="">Past Speakers</a>
+				<a href="">Contact Information</a>
+			</ul>
+		</li>
 	</ul>
 </nav>
 
@@ -64,7 +75,7 @@
 		<aside>
 		
 		<h2>Guest speakers</h2>
-		
+		<div id="speakers">		
 		<h3> October <br>
 		<a href="speakers/toobin.html">Jeffrey Toobin</a></h3>
 		<img src="images/toobin75.jpg" alt="Jeffrey Toobin">
