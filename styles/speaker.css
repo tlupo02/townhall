@@ -1,187 +1,218 @@
-*{
+/* the styles for the elements */
+* {
 	margin: 0;
 	padding: 0;
 }
-
-
-/* the styles for the elements */
+html {
+	background-color: white;
+}
 body {
 	font-family: Arial, Helvetica, sans-serif;
     font-size: 100%;
-	max-width: 800px;
-	margin: auto;
-	border: 3px solid #931420;
-	background-color: #fffded;
+    width: 800px;
+    margin: 0 auto;
+    border: 3px solid #931420;
+    background-color: #fffded;
 }
-
-html{
-	background-color: white;
+a:focus, a:hover {
+	font-style: italic;
 }
-
-header{
+/* the styles for the header */
+header {
+	padding: 1.5em 0 2em 0;
 	border-bottom: 3px solid #931420;
-	padding-top: 1.5em;
-	padding-bottom: 2em;
-	background: linear-gradient(#f6bb73 0%, #f6bb73 30%, white 50%, #f6bb73 80%, #f6bb73 100%)
+	background-image: -moz-linear-gradient(
+	    30deg, #f6bb73 0%, #f6bb73 30%, white 50%, #f6bb73 80%, #f6bb73 100%);
+	background-image: -webkit-linear-gradient(
+	    30deg, #f6bb73 0%, #fffded 30%, white 50%, #fffded 80%, #f6bb73 100%);
+	background-image: -o-linear-gradient(
+	    30deg, #f6bb73 0%, #fffded 30%, white 50%, #fffded 80%, #f6bb73 100%);
+	background-image: linear-gradient(
+	    30deg, #f6bb73 0%, #fffded 30%, white 50%, #fffded 80%, #f6bb73 100%);
 }
-
-
 header h2 {
-	font-size: 170%;
+	font-size: 175%;
 	color: #800000;
 }
-
-header h3{
+header h3 {
 	font-size: 130%;
 	font-style: italic;
 }
-
-h3 span {
-	box-shadow: #800000;
-}
-
-
-/* the styles for the header */
 header img {
 	float: left;
-	padding-left: 30px;
-	padding-right: 30px;
+	padding: 0 30px;
 }
-
-#nav_menu ul{
-	margin: 0;
-	padding: 0;
-	list-style-type: none;
-	position: relative;
+.shadow {
+	text-shadow: 2px 2px 2px #800000;
 }
-#nav_menu ul li{
-	float: left;
-}
-#nav_menu ul li a{
-	display: block;
-	width: 160px;
-	padding-top: 1em;
-	padding-bottom: 1em;
-	text-align: center;
-	text-decoration: none;
-	background-color: #800000;
-	color: white;
-	font-weight: bold;
-}
-#nav_menu ul li a.current{
-	color: yellow;
-}
-#nav_menu ul ul{
-	display: none;
-	position: absolute;
-	top: 100%;
-	width: 100%;
-}
-#nav_menu ul li:hover > ul{
-	display: block;
-}
-#nav_menu > ul::after{
-	content: "";
-	display: block;
-	clear: both;
-}
-/* the styles for the section */
+/* the styles for the main content */
 main {
 	clear: left;
-	
 }
-section ul{
-	list-style-type: circle;
+#printButton {
+	margin-top: .5em;
 }
-h1{
-	font-size: 150%;
-	padding-top: .5em;
-	padding-bottom: .15em;
+/* the styles for the navigation menu */
+#nav_menu ul {
+	list-style-type: none;
 	margin: 0;
-	color: #800000;
-}
-article{
-	padding-top: .5em;
-	padding-bottom: .5em;
-}
-article img{
-	float: right;
-	margin-top: 15px;
-	margin-bottom: 15px;
-	margin-left: 15px;
 	padding: 0;
-	border: 1px solid black;
+	position: relative;
 }
-article h2{
-	padding-top: 0;
-	color: black;
+#nav_menu ul li {
+	float: left;
 }
-article h3{
-	font-size: 105%;
-	padding-bottom: .25em;
+#nav_menu ul li a {
+    display: block;
+    width: 160px;
+    text-align: center;
+    padding: 1em 0;
+    text-decoration: none;
+    background-color: #800000;
+    color: white;
+    font-weight: bold;
 }
-main h2{
-	font-size: 130%;
-	color: #800000;
-	padding-top: .5em;
-	padding-bottom: .25em;
+#nav_menu ul ul {
+    display: none;
+    position: absolute;
+    top: 100%;
+}
+#nav_menu ul ul li {
+	float: none;
+}
+#nav_menu ul li:hover > ul {
+	display: block;
+}
+#nav_menu > ul::after {
+    content: "";
+    clear: both;
+    display: block;
+}
 
-}
-main h3{
-	font-size: 105%;
-	padding-bottom: .25em;
-}
-main a:hover{
-	font-style: italic;
-}
-main img{
-	padding-bottom: 1em;
-}
-main p{
-	padding-bottom: .5em;
-}
-main blockquote{
-	padding-left: 2em;
-	padding-right: 2em;
-	font-style: italic;
-}
-main ul{
-	padding-bottom: .25em;
-	padding-left: 1.25em;
-}
-main li{
-	padding-bottom: .35em;
-}
-section{
+/* the styles for the section */
+section {
 	width: 525px;
 	float: right;
-	padding-right: 20px;
-	padding-left: 20px;
-	padding-bottom: 20px;
+	padding: 0 20px 20px;
 }
-aside{
+section h1 {
+	color: #800000;
+	font-size: 150%;
+	padding-top: .5em;
+	margin: 0;
+}
+section h1.spaceafter {
+	margin-bottom: .25em;
+}
+section p {
+	padding-bottom: .5em;
+}
+section blockquote {
+	padding: 0 2em;
+	font-style: italic;
+}
+section ul {
+	padding: .25em 0 .5em 0;
+}
+section li {
+	padding-bottom: .35em;
+}
+/* the styles for the image swap list */ 
+section #image_list li {
+	padding: 2px;
+	display: inline;
+}
+section #image_list a {
+	border:none;
+}
+section #image_list ul {
+	padding-bottom: .25em;
+	text-decoration: none;
+}
+/* the styles for the image rollover */
+section #image_rollovers {
+	list-style: none;
+}
+/* the styles for the article */
+article {
+	padding: .5em 0;
+}
+article h2 {
+	font-size: 115%;
+	padding: 0 0 .25em 0;
+}
+article img {
+	float: right;
+	margin: .5em 0 1em 1em;
+	border: 1px solid black;
+}
+/* the styles for the aside */
+aside {
 	width: 215px;
 	float: right;
 	padding-left: 20px;
-	padding-bottom: 20px;
 }
-aside h3{
+aside h2 {
+	color: #800000;
+	font-size: 130%;
+	padding: .5em 0 .25em 0;
+}
+
+aside h3 {
 	font-size: 105%;
 	padding-bottom: .25em;
 }
-aside img{
+aside img {
 	padding-bottom: 1em;
 }
-
+aside p {
+	padding-bottom: .5em;
+}
 /* the styles for the footer */
-footer{
-	text-align: center;
-	border: 3px solid #931420;
+footer {
+	margin-top: 1.5em;
 	background-color: #931420;
-	color: white;
 	clear: both;
 }
-footer p{
-	padding-top: 1em;
-	padding-bottom: 1em;
+footer p {
+	text-align: center;
+	color: white;
+	padding: 1em 0;
+}
+@media print {
+	body {
+		font-family: "Times New Roman", Times, serif";
+		width: auto;
+		border: none;
+	}
+	p {
+		font-size: 87.5%;
+	}
+	#nav_menu, aside h2 {
+		display: none;
+	}
+	section {
+		width: 5in;
+		padding-right: 0;
+	}
+	aside {
+		width: 2in;
+		padding-top: 1em;
+		padding-left: 0;
+		float: none;
+	}
+	aside h2 {
+		font-size: 100%;
+	}
+	aside a {
+		text-decoration: none;
+		color: black;
+	}
+	footer p {
+		padding-top: .75em;
+		border-top: 3px solid #931420;
+	}
+	#printButton {
+		display: none;
+	}
 }
